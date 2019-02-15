@@ -27,7 +27,7 @@ for integration in `cd $build_dir && echo @segment/*`; do
     integrations_require+="SEGMENT_INTEGRATIONS.push(integration_$counter);"
 done
 
-echo -e $integrations_require >> App.tsx
+echo -e $integrations_require >> requires.js
 
 echo "Installing runtime dependencies"
 yarn add $install_command @babel/{core,runtime}
